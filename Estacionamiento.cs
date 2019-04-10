@@ -14,6 +14,7 @@ namespace ParkingLotLagash
 
 
 
+
         public Estacionamiento(int precioPorDia)
         {
             this.PrecioPorDia = precioPorDia;
@@ -59,7 +60,7 @@ namespace ParkingLotLagash
         {
             // Cuando aprete en ingresar sume +1.
 
-            if (cantidadDeAutos == 100)
+            if (cantidadDeAutos == maximaCantidadAutos)
             {
                 Console.WriteLine("Limite de capacidad.");
             }
@@ -76,9 +77,9 @@ namespace ParkingLotLagash
         public void FacturarEstadia()
         {
             int input = PrecioPorDia * totalDeAutosIngresados;
-
-            Console.WriteLine("Factura de estadia" + input);
-            Console.ReadKey();
+            ServicioExterno.EnviarMail("Asunto Ejemplo" + " ", "La Facturacion del dia de hoy fue de:" + " " + input + " " , "email@ejemplo.com");
+            
+            
         }
     }
 }

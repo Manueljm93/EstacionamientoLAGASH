@@ -9,6 +9,7 @@ namespace ParkingLotLagash
     class Program
     {
         private static int index = 0;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Bienvenido a ParkingLot! Aprete cualquier teclada para ver el menu.");
@@ -21,102 +22,89 @@ namespace ParkingLotLagash
             {
                 "Ingresar auto",
                 "Egresar auto",
-                "Exit",
+                "Salir",
             };
 
-
             Console.CursorVisible = false;
+
             while (true)
             {
-                
-                string selectMenuItem = drawnMenu(menuItems);
-                if (selectMenuItem == "Ingresa auto")
-                {
-                    Console.Clear();
-                    estacionamiento.IngresoDetectado(); Console.Read();
+                string selectMenuItem = dibujarMenu(menuItems);
+                if (selectMenuItem == "Egresar auto")
+                {                    
+                    estacionamiento.EgresoDetectado();
+                    Console.ReadKey();                    
                 }
-                else if (selectMenuItem == "Egresar auto")
+                else if (selectMenuItem == "Ingresar auto")
                 {
-                    estacionamiento.EgresoDetectado(); Console.Read();
+                    estacionamiento.IngresoDetectado();
+                    Console.ReadKey();
                 }
-                else if (selectMenuItem == "Exit")
+                else if (selectMenuItem == "Salir")
                 {
-                    Environment.Exit(0);
+                    Environment.Exit(0);                    
                 }
             }
         }
 
-        private static void Tiempo(Estacionamiento estacionamiento)
+        private static void EnviarFacturacion(Estacionamiento estacionamiento)
         {
             DateTime Tiempo = DateTime.Now;
 
-            if (Tiempo.ToString("HH:mm") == "00:00")
+            if (Tiempo.ToString("HH") == "00")
             {
                 estacionamiento.FacturarEstadia();
-                ServicioExterno.EnviarMail("Asunto Ejemplo", "Cuerpo Ejemplo", "email@ejemplo.com");
-                Console.WriteLine("Correo enviado.");
+                           
                 Console.ReadKey();
             }
         }
 
-        private static string drawnMenu(List<string> items)
+        private static string dibujarMenu(List<string> items)
         {
             for (int i = 0; i < items.Count; i++)
             {
                 if (i == index)
                 {
+                    Console.Clear();
                     Console.BackgroundColor = ConsoleColor.Gray;
                     Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine(items[i]);
-                    
+
+                    Console.WriteLine(items[i]);                    
                 }
                 else
                 {
                     Console.WriteLine(items[i]);
-                   
                 }
                 Console.ResetColor();
             }
 
-            if (Console.KeyAvailable)
-            {
-                ConsoleKeyInfo ckey = Console.ReadKey();
-                if (ckey.Key == ConsoleKey.DownArrow)
-                {
-                    if (index == items.Count - 1)
-                    {
-                        index = 0;
-                    }
-                    else
-                    {
-                        index++;
-                    }
-                }
-                else if (ckey.Key == ConsoleKey.UpArrow)
-                {
-                    if (index <= 0)
-                    {
-                        index = items.Count - 1;
-                    }
-                    else
-                    {
-                        index--;
-                    }
+            ConsoleKeyInfo ckey = Console.ReadKey();
 
-                }
-                else if (ckey.Key == ConsoleKey.Enter)
+            if (ckey.Key == ConsoleKey.DownArrow)
+            {                
+                if (index == items.Count - 1)
                 {
-                    return items[index];              
+                    index = 0; 
                 }
-                else
-                {
-                    return "";
-                }
-                
-
+                else { index++; }
             }
-            Console.ReadKey();
-            Console.Clear();
+            else if (ckey.Key == ConsoleKey.UpArrow)
+            {
+                if (index <= 0)
+                {
+                    index = items.Count - 1; 
+                }
+                else { index--; }
+            }
+            else if (ckey.Key == ConsoleKey.Enter)
+            {
+                
+                return items[index];
+            }
+            else
+            {                
+                return "";
+            }            
             return "";
         }
     }

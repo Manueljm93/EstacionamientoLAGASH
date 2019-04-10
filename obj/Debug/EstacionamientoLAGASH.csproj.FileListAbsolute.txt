@@ -5,3 +5,10 @@ C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-mast
 C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.pdb
 C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.exe
 C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.pdb
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.exe.config
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.exe
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.pdb
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.csprojAssemblyReference.cache
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.csproj.CoreCompileInputs.cache
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.exe
+D:\Visual Studio Projects\Estacionamiento\EstacionamientoLAGASH\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.pdb

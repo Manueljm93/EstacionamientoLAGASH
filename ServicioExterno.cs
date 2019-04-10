@@ -10,7 +10,7 @@ namespace ParkingLotLagash
     {
         public static void EnviarMail(string asunto, string cuerpo, string mail)
         {
-
+            Console.WriteLine("Correo enviado.");
         }
     }
 }

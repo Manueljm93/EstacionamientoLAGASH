@@ -1,0 +1,7 @@
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.csprojAssemblyReference.cache
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.csproj.CoreCompileInputs.cache
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.exe.config
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.exe
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\bin\Debug\EstacionamientoLAGASH.pdb
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.exe
+C:\Users\Manuk\Downloads\EstacionamientoLAGASH-master\EstacionamientoLAGASH-master\EstacionamientoLAGASH\obj\Debug\EstacionamientoLAGASH.pdb

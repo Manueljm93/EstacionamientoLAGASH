@@ -54,7 +54,7 @@ namespace ParkingLotLagash
             if (Tiempo.ToString("HH") == "00")
             {
                 estacionamiento.FacturarEstadia();
-                           
+                Console.WriteLine("Correo Enviado");
                 Console.ReadKey();
             }
         }

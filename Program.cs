@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ParkingLotLagash
 {
     class Program
     {
         private static int index = 0;
+        private static bool interruptor = true;
 
         static void Main(string[] args)
         {
@@ -24,27 +26,33 @@ namespace ParkingLotLagash
                 "Egresar auto",
                 "Salir",
             };
-
+            
             Console.CursorVisible = false;
-
+            
             while (true)
+
             {
+                
+
+                if (interruptor == true) { 
                 string selectMenuItem = dibujarMenu(menuItems);
+                  
                 if (selectMenuItem == "Egresar auto")
-                {                    
-                    estacionamiento.EgresoDetectado();
-                    Console.ReadKey();                    
+                {                        
+                        estacionamiento.EgresoDetectado();
                 }
                 else if (selectMenuItem == "Ingresar auto")
                 {
                     estacionamiento.IngresoDetectado();
-                    Console.ReadKey();
+                    
                 }
                 else if (selectMenuItem == "Salir")
                 {
-                    Environment.Exit(0);                    
+                    Environment.Exit(0);                                             
                 }
+                } 
             }
+
         }
 
         private static void EnviarFacturacion(Estacionamiento estacionamiento)
@@ -65,47 +73,56 @@ namespace ParkingLotLagash
             {
                 if (i == index)
                 {
-                    Console.Clear();
                     Console.BackgroundColor = ConsoleColor.Gray;
                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine(items[i]);                    
+                    Console.WriteLine(items[i]);
                 }
                 else
                 {
                     Console.WriteLine(items[i]);
+                    
+
                 }
                 Console.ResetColor();
-            }
+                interruptor = false;
 
-            ConsoleKeyInfo ckey = Console.ReadKey();
-
-            if (ckey.Key == ConsoleKey.DownArrow)
-            {                
-                if (index == items.Count - 1)
-                {
-                    index = 0; 
-                }
-                else { index++; }
             }
-            else if (ckey.Key == ConsoleKey.UpArrow)
-            {
-                if (index <= 0)
-                {
-                    index = items.Count - 1; 
-                }
-                else { index--; }
-            }
-            else if (ckey.Key == ConsoleKey.Enter)
+            
+            if (Console.KeyAvailable && interruptor == false)
             {
                 
-                return items[index];
+                ConsoleKeyInfo ckey = Console.ReadKey(true);
+                if (ckey.Key == ConsoleKey.DownArrow)
+                {
+                    if (index == items.Count - 1)
+                    {
+                        index = 0;
+                    }
+                    else
+                    {
+                        index++;
+                    }
+
+                }
+                else if (ckey.Key == ConsoleKey.UpArrow)
+                {
+                    if (index <= 0)
+                    {
+                        index = items.Count - 1;
+                    }
+                    else
+                    {
+                        index--;
+                    }
+
+                }
+                else if (ckey.Key == ConsoleKey.Enter)
+                {
+                    return items[index];
+                }                    
             }
-            else
-            {                
-                return "";
-            }            
-            return "";
+                    return "";
         }
     }
 }

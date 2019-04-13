@@ -52,6 +52,8 @@ namespace ParkingLotLagash
             {
                 --cantidadDeAutos;
                 Console.WriteLine("Egreso un vehiculo." + " " + "Autos estacionados:" + " " + cantidadDeAutos);
+                Console.WriteLine("Presione Cualquier tecla para continuar...");
+
             }
 
         }
@@ -68,6 +70,8 @@ namespace ParkingLotLagash
             {
                 ++cantidadDeAutos;
                 Console.WriteLine("Ingreso un vehiculo." + " " + "Autos estacionados:" + " " + cantidadDeAutos);
+                Console.WriteLine("Presione Cualquier tecla para continuar...");
+               
             }
 
             // Cuente la cantidad total de autos que ingresaron durante el dia.

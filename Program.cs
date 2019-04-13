@@ -40,11 +40,12 @@ namespace ParkingLotLagash
                 if (selectMenuItem == "Egresar auto")
                 {                        
                         estacionamiento.EgresoDetectado();
+                         Console.ReadKey();                    
                 }
                 else if (selectMenuItem == "Ingresar auto")
                 {
                     estacionamiento.IngresoDetectado();
-                    
+                    Console.ReadKey();
                 }
                 else if (selectMenuItem == "Salir")
                 {
@@ -89,7 +90,7 @@ namespace ParkingLotLagash
 
             }
             
-            if (Console.KeyAvailable && interruptor == false)
+            if (Console.KeyAvailable)
             {
                 
                 ConsoleKeyInfo ckey = Console.ReadKey(true);

@@ -31,7 +31,22 @@ namespace ParkingLotLagash
 
             while (true)
             {
-                
+                string selectMenuItem = "";
+                selectMenuItem = dibujarMenu(menuItems);
+
+                if (selectMenuItem == "Egresar auto")
+                {
+                    estacionamiento.EgresoDetectado();
+                }
+                else if (selectMenuItem == "Ingresar auto")
+                {
+                    estacionamiento.IngresoDetectado();
+
+                }
+                else if (selectMenuItem == "Salir")
+                {
+                    Environment.Exit(0);                    
+                }
             }
         }
 

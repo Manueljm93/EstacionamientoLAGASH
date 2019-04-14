@@ -46,6 +46,9 @@ namespace ParkingLotLagash
                 else if (selectMenuItem == "Salir")
                 {
                     Environment.Exit(0);
+                    Environment.Exit(0);
+                    Environment.Exit(0);
+                    Environment.Exit(0);
                 }
 
             }
